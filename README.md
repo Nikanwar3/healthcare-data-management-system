@@ -266,4 +266,4 @@ uses non-deterministic status/date assignment by design, see
 
 ## License
 
-For portfolio/demonstration purposes.
+MIT -- see `LICENSE`.

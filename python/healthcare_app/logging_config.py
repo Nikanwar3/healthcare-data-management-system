@@ -1,8 +1,9 @@
 """Centralized logging setup.
 
-Logs diagnostic information (DSN, report name, row counts, timings, error
-text) but never credentials -- callers must not pass OracleConfig.password
-or raw connection strings containing a password into any log call.
+Logs diagnostic information (host/port/dbname, report name, row counts,
+timings, error text) but never credentials -- callers must not pass
+PostgresConfig.password or raw connection strings containing a password
+into any log call.
 """
 
 from __future__ import annotations

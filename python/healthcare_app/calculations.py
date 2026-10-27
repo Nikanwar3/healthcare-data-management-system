@@ -1,11 +1,11 @@
 """Pure, dependency-free calculation helpers.
 
-PKG_CLINICAL_REPORTING already computes rates inside the database (see
-plsql/packages/pkg_clinical_reporting.pkb). These functions exist for two
+pkg_clinical_reporting already computes rates inside the database (see
+plpgsql/packages/pkg_clinical_reporting.sql). These functions exist for two
 reasons: (1) so client-side code that reshapes a report for export can
 recompute a derived figure without a second round trip to the database, and
 (2) so that calculation logic has a Python-testable home that does not
-require an Oracle instance -- see python/tests/unit/test_calculations.py.
+require a database instance at all -- see python/tests/unit/test_calculations.py.
 
 Every function here is a pure function: no I/O, no hidden state, safe to
 call with synthetic fixtures.

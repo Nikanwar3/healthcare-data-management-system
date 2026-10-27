@@ -11,8 +11,9 @@ from healthcare_app.exceptions import ExportError
 
 
 def _json_default(value):
-    """Handle the value types Oracle result sets commonly contain that
-    `json.dumps` cannot serialize natively: dates/timestamps and Decimal.
+    """Handle the value types PostgreSQL result sets commonly contain that
+    `json.dumps` cannot serialize natively: dates/timestamps and Decimal
+    (psycopg2 maps NUMERIC columns to Decimal, not float).
     """
     if isinstance(value, (datetime.date, datetime.datetime)):
         return value.isoformat()

@@ -1,6 +1,6 @@
-"""Synthetic, hand-authored fixture rows shaped like real PKG_CLINICAL_REPORTING /
-PKG_DATA_QUALITY result sets, so unit tests can exercise application logic
-without any Oracle instance. Values are chosen to make the expected
+"""Synthetic, hand-authored fixture rows shaped like real pkg_clinical_reporting /
+pkg_data_quality result sets, so unit tests can exercise application logic
+without any database instance. Values are chosen to make the expected
 calculation results easy to verify by hand.
 """
 
